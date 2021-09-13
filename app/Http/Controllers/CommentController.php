@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 class CommentController extends Controller
 {
     public function comment($name, $pesan) {
-        return "Nama: $name <br>
-            Pesan: $pesan";
+        return view('comment', ['nama' => $name, 'pesan' => $pesan]);
     }
 }
